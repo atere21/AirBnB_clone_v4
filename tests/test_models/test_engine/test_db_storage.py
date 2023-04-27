@@ -67,6 +67,22 @@ test_db_storage.py'])
             self.assertTrue(len(func[1].__doc__) >= 1,
                             "{:s} method needs a docstring".format(func[0]))
 
+    def test_get_func(self):
+        """ test get function """
+        state = State(name='cundi')
+        models.storage.new(state)
+        models.storage.save()
+        self.assertEqual(models.storage.get("State", state.id).id, state.id)
+
+    def test_count_func(self):
+        """ test count fuction """
+        number_states1 = models.storage.count("State")
+        state2 = State(name='tunja')
+        models.storage.new(state2)
+        models.storage.save()
+        number_states2 = models.storage.count("State")
+        self.assertEqual(number_states1, number_states2 - 1)
+
 
 class TestFileStorage(unittest.TestCase):
     """Test the FileStorage class"""
