@@ -114,4 +114,3 @@ def amenity_from_place_post(place_id, amenity_id):
     else:
         place.amenities.append(amenity.id)
     return (jsonify(amenity.to_dict()), 201)
-
