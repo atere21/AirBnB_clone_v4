@@ -155,4 +155,4 @@ No known bugs at this time.
 
 ## Authors
 Atere Oluwatosin - [Github](https://github.com/atere21) / [Twitter](https://twitter.com/)  
-Joel Paul - [Github](https://github.com/Jaaystones) / [Twitter](https://twitter.com/Jaaystones) 
+

@@ -134,4 +134,3 @@ def review_post(place_id):
     storage.new(new_obj)
     storage.save()
     return (jsonify(new_obj.to_dict()), 201)
-
